@@ -1,4 +1,3 @@
-
 import { audienceChips } from "../data/siteData";
 import PageShell from "../components/PageShell";
 import Stats from "../components/Stats";
@@ -21,4 +20,3 @@ function About() {
 }
 
 export default About;
-

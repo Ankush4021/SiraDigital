@@ -1,159 +1,250 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 function ServiceHero({ navigate }) {
   return (
-    <section className="relative overflow-hidden px-6 pb-24 pt-36">
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <section className="hero-shell">
+      {/* Orbit */}
+      <motion.div
+        className="hero-orbit"
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 45,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
 
-        {/* LEFT */}
+      <div className="hero-grid lg:grid-cols-[0.9fr_1.1fr]">
+        {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-3xl"
+          className="hero-copy"
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
         >
-          <p className="mb-6 text-sm uppercase tracking-[0.28em] text-white/45">
-            Our Digital Services
+          <div className="pill">
+            <Sparkles size={10} />
+            SERVICES BY SIRA DIGITAL
+          </div>
+
+          <motion.h1
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+            }}
+            className="mt-4 max-w-[10ch] text-2xl font-[800] leading-[1.02] tracking-[-0.04em] text-white">
+            Digital Solutions
+            For Growing
+            Businesses.
+          </motion.h1>
+
+          <p className="mt-5 max-w-xl text-[0.98rem] leading-7 text-white/65">
+            SIRA Digital helps businesses build a powerful online presence
+            through website development, branding, graphic design, video
+            editing, SEO, and social media marketing solutions designed to
+            drive growth and visibility.
           </p>
 
-          <h1 className="text-[clamp(2.8rem,5vw,4.8rem)] font-[800] leading-[0.98] tracking-[-0.04em] text-white">
-            Digital solutions built for modern brands.
-          </h1>
-
-          <p className="mt-8 max-w-2xl text-[1.04rem] leading-8 text-white/65">
-            We craft scalable websites, visual identities, and digital
-            experiences that help brands grow with clarity and confidence.
-          </p>
-
-          {/* BUTTONS */}
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-
-            {/* START PROJECT */}
+          <div className="mt-10 flex flex-wrap gap-4">
             <button
               onClick={() => navigate("/contact")}
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-300 hover:scale-[1.02] hover:bg-white/90"
+              className="btn btn-primary"
             >
               Start a Project
-
-              <ArrowUpRight
-                size={16}
-                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-              />
+              <ArrowUpRight size={16} />
             </button>
 
-            {/* PORTFOLIO */}
             <button
               onClick={() => navigate("/projects")}
-              className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-white/70 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.03] hover:text-white"
+              className="btn btn-secondary"
             >
               View Portfolio
             </button>
-
-          </div>
-
-          {/* MINI TAGS */}
-          <div className="mt-14 flex flex-wrap gap-3">
-
-            {["Web Design", "Development", "Branding", "SEO"].map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-wide text-white/50 backdrop-blur-sm"
-              >
-                {item}
-              </span>
-            ))}
-
           </div>
         </motion.div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE CARD */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
-          className="relative"
+          className="slider-card max-w-[560px] ml-auto"
+          initial={{
+            opacity: 0,
+            y: 60,
+            scale: 0.95,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          whileHover={{
+            y: -6,
+          }}
         >
+          <div className="slider-topbar">
+            <span />
+            <span />
+            <span />
+          </div>
 
-          {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 via-cyan-500/10 to-transparent blur-3xl" />
+          <div className="relative p-4">
 
-          <div className="relative space-y-5">
+            <motion.div
+              className="absolute right-6 top-6 h-24 w-24 rounded-full bg-violet-500/20 blur-3xl"
+              animate={{
+                scale: [1, 1.15, 1],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+              }}
+            />
 
-            {/* TOP CARD */}
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-xl">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-semibold text-violet-300">
+                  WHAT WE DO
+                </p>
 
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-white/40">
-                    Core Services
-                  </p>
-
-                  <h3 className="mt-4 text-3xl font-[800] leading-tight text-white">
-                    Crafted for growth-driven brands.
-                  </h3>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-white/60">
-                  SIRA
-                </div>
+                <h3 className="mt-3 max-w-xs text-2xl font-bold text-white">
+                  Digital services crafted for growth.
+                </h3>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white">
+                SIRA
+              </div>
+            </div>
 
-                {[
-                  "Web Design",
-                  "Development",
-                  "UI Systems",
-                  "Brand Identity",
-                  "SEO",
-                  "Motion",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/65"
-                  >
-                    {item}
+            <div className="mt-8 h-px bg-white/10" />
+
+            <div className="mt-8 grid grid-cols-3 gap-4">
+
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+              >
+                <h4 className="text-2xl font-black text-white">
+                  25+
+                </h4>
+
+                <p className="mt-2 text-xs uppercase tracking-wider text-white/50">
+                  Projects
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+              >
+                <h4 className="text-2xl font-black text-white">
+                  4+
+                </h4>
+
+                <p className="mt-2 text-xs uppercase tracking-wider text-white/50">
+                  Services
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+              >
+                <h4 className="text-2xl font-black text-white">
+                  100%
+                </h4>
+
+                <p className="mt-2 text-xs uppercase tracking-wider text-white/50">
+                  Custom
+                </p>
+              </motion.div>
+
+            </div>
+
+            <div className="mt-8 grid gap-4">
+
+              <motion.div
+                whileHover={{ x: 4 }}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      Web Development
+                    </h4>
+
+                    <p className="mt-1 text-sm text-white/55">
+                      Fast, scalable and responsive websites.
+                    </p>
                   </div>
-                ))}
 
-              </div>
+                  <ArrowUpRight size={18} className="text-white/50" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ x: 4 }}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      Branding & Design
+                    </h4>
+
+                    <p className="mt-1 text-sm text-white/55">
+                      Build a strong and memorable identity.
+                    </p>
+                  </div>
+
+                  <ArrowUpRight size={18} className="text-white/50" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ x: 4 }}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      SEO & Marketing
+                    </h4>
+
+                    <p className="mt-1 text-sm text-white/55">
+                      Improve visibility and generate leads.
+                    </p>
+                  </div>
+
+                  <ArrowUpRight size={18} className="text-white/50" />
+                </div>
+              </motion.div>
+
             </div>
-
-            {/* BOTTOM GRID */}
-            <div className="grid gap-5 md:grid-cols-2">
-
-              <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
-
-                <p className="text-sm uppercase tracking-[0.2em] text-white/40">
-                  Experience
-                </p>
-
-                <h3 className="mt-4 text-2xl font-[800] text-white">
-                  Modern digital systems with clean scalable architecture.
-                </h3>
-
-              </div>
-
-              <div className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
-
-                <p className="text-sm uppercase tracking-[0.2em] text-white/40">
-                  Approach
-                </p>
-
-                <h3 className="mt-4 text-2xl font-[800] text-white">
-                  Design focused on clarity, interaction, and performance.
-                </h3>
-
-              </div>
-
-            </div>
+            ```
 
           </div>
         </motion.div>
-
       </div>
     </section>
   );

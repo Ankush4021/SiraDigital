@@ -18,14 +18,14 @@ function Home({ navigate }) {
       <LogoStrip />
       <ServicesPreview />
       <AboutPreview />
-      <ProjectsPreview /> 
+      <ProjectsPreview />
       <ContactBand />
       <Testimonials />
     </>
   );
 }
 
-function Hero({navigate}) {
+function Hero({ navigate }) {
   return (
     <section className="hero-shell">
       <motion.div
@@ -44,7 +44,14 @@ function Hero({navigate}) {
         >
           <motion.div
             className="pill"
-            animate={{ y: [0, -4, 0], boxShadow: ["0 0 28px rgba(166, 77, 255, 0.2)", "0 0 54px rgba(166, 77, 255, 0.36)", "0 0 28px rgba(166, 77, 255, 0.2)"] }}
+            animate={{
+              y: [0, -4, 0],
+              boxShadow: [
+                "0 0 28px rgba(166, 77, 255, 0.2)",
+                "0 0 54px rgba(166, 77, 255, 0.36)",
+                "0 0 28px rgba(166, 77, 255, 0.2)",
+              ],
+            }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <Sparkles size={15} />
@@ -52,8 +59,8 @@ function Hero({navigate}) {
           </motion.div>
           <h1>Digital presence that feels clear, useful, and built with intent.</h1>
           <p>
-            SIRA Digital helps small businesses, creators, startups, and local brands look sharper online through
-            websites, branding, video, and consistent digital content
+            SIRA Digital helps small businesses, creators, startups, and local brands look sharper
+            online through websites, branding, video, and consistent digital content
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a href="tel:+919690070133" className="btn btn-primary">
@@ -95,7 +102,11 @@ function ServicesPreview() {
       className="services-section"
       headingClassName="services-title"
     >
-      <motion.div ref={sectionRef} className="service-flow-list" style={{ y: gridY, opacity: gridOpacity }}>
+      <motion.div
+        ref={sectionRef}
+        className="service-flow-list"
+        style={{ y: gridY, opacity: gridOpacity }}
+      >
         {services.map((service, index) => (
           <ServiceFlow key={service.title} service={service} index={index} />
         ))}
@@ -106,7 +117,10 @@ function ServicesPreview() {
 
 function AboutPreview() {
   return (
-    <Section eyebrow="About SIRA" title="We build digital experiences that actually grow your business">
+    <Section
+      eyebrow="About SIRA"
+      title="We build digital experiences that actually grow your business"
+    >
       <div className="about-panel">
         <motion.div
           variants={fadeUp}
@@ -117,8 +131,8 @@ function AboutPreview() {
           className="max-w-2xl"
         >
           <p className="text-xl leading-9 text-white/74">
-            At SIRA Digital, we solve business problems with websites, visuals, and digital systems that are clear,
-            polished, and built to work.
+            At SIRA Digital, we solve business problems with websites, visuals, and digital systems
+            that are clear, polished, and built to work.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {["Clear direction", "Functional execution", "Visual consistency"].map((item) => (
@@ -142,7 +156,10 @@ function AboutPreview() {
 
 function ProjectsPreview() {
   return (
-    <Section eyebrow="Portfolio" title="Selected work shaped around clarity, trust, and conversion.">
+    <Section
+      eyebrow="Portfolio"
+      title="Selected work shaped around clarity, trust, and conversion."
+    >
       <ProjectGrid />
     </Section>
   );

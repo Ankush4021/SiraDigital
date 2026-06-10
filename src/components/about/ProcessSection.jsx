@@ -48,17 +48,15 @@ function ProcessSection() {
           }}
           className="mx-auto max-w-3xl text-center"
         >
-          <span className="eyebrow">
-            How We Work
-          </span>
+          <span className="eyebrow">How We Work</span>
 
           <h2 className="mt-8 text-[clamp(2.2rem,4vw,4rem)] font-[800] leading-[1.02] tracking-[-0.04em] text-white">
             A structured process built around clarity and thoughtful execution.
           </h2>
 
           <p className="mx-auto mt-8 max-w-2xl text-[1rem] leading-8 text-white/60">
-            Every project follows a focused workflow designed to keep communication clear,
-            decisions intentional, and the final experience visually consistent.
+            Every project follows a focused workflow designed to keep communication clear, decisions
+            intentional, and the final experience visually consistent.
           </p>
         </motion.div>
 
@@ -82,9 +80,7 @@ function ProcessSection() {
                     delay: index * 0.06,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={`relative flex ${
-                    isLeft ? "lg:justify-start" : "lg:justify-end"
-                  }`}
+                  className={`relative flex ${isLeft ? "lg:justify-start" : "lg:justify-end"}`}
                 >
                   {/* center dot */}
                   <div className="absolute left-1/2 top-10 hidden h-4 w-4 -translate-x-1/2 rounded-full border border-white/10 bg-[#a64dff] shadow-[0_0_30px_rgba(166,77,255,0.8)] lg:block" />
@@ -108,9 +104,7 @@ function ProcessSection() {
                           STEP {step.number}
                         </span>
 
-                        <h3 className="mt-5 text-3xl font-[800] text-white">
-                          {step.title}
-                        </h3>
+                        <h3 className="mt-5 text-3xl font-[800] text-white">{step.title}</h3>
 
                         <p className="mt-5 max-w-lg text-[0.98rem] leading-8 text-white/55">
                           {step.text}

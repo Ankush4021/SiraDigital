@@ -4,57 +4,48 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import { fadeUp } from "../../data/motion";
 
 const stagger = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.16,
-        },
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.16,
     },
+  },
 };
 
 function ProjectsHero({ navigate }) {
+  const handleExplore = () => {
+    document.getElementById("projects-showcase")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
-    const handleExplore = () => {
+  return (
+    <section className="relative overflow-hidden px-6 pt-26 pb-32 lg:pt-36 lg:pb-40">
+      {/* ambient background */}
 
-        document
-            .getElementById("projects-showcase")
-            ?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
+      <div className="absolute left-[8%] top-[0%] h-[24rem] w-[24rem] rounded-full bg-[#a64dff]/12 blur-[130px]" />
 
-    };
+      <div className="absolute right-[4%] bottom-[0%] h-[28rem] w-[28rem] rounded-full bg-[#ff4fd8]/10 blur-[160px]" />
 
-    return (
+      {/* grid texture */}
 
-        <section className="relative overflow-hidden px-6 pt-26 pb-32 lg:pt-36 lg:pb-40">
+      <div className="absolute inset-0 opacity-[0.035]">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+      </div>
 
-            {/* ambient background */}
-
-            <div className="absolute left-[8%] top-[0%] h-[24rem] w-[24rem] rounded-full bg-[#a64dff]/12 blur-[130px]" />
-
-            <div className="absolute right-[4%] bottom-[0%] h-[28rem] w-[28rem] rounded-full bg-[#ff4fd8]/10 blur-[160px]" />
-
-            {/* grid texture */}
-
-            <div className="absolute inset-0 opacity-[0.035]">
-
-                <div
-                    className="h-full w-full"
-                    style={{
-                        backgroundImage:
-                            "linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)",
-                        backgroundSize: "48px 48px",
-                    }}
-                />
-
-            </div>
-
-            <motion.div
-                variants={stagger}
-                initial="hidden"
-                animate="visible"
-                className="
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="visible"
+        className="
                 relative
                 z-10
                 mx-auto
@@ -64,21 +55,17 @@ function ProjectsHero({ navigate }) {
                 lg:grid-cols-[1.05fr_0.95fr]
                 lg:items-center
                 "
-            >
+      >
+        {/* LEFT */}
 
-                {/* LEFT */}
+        <motion.div variants={fadeUp}>
+          <div className="pill mb-7">
+            <Sparkles size={14} />
+            Selected Work
+          </div>
 
-                <motion.div variants={fadeUp}>
-
-                    <div className="pill mb-7">
-
-                        <Sparkles size={14} />
-
-                        Selected Work
-
-                    </div>
-
-                    <h1 className="
+          <h1
+            className="
                     max-w-[620px]
                     text-[2.15rem]
                     font-[800]
@@ -86,105 +73,71 @@ function ProjectsHero({ navigate }) {
                     text-white
                     md:text-[3rem]
                     xl:text-[3.7rem]
-                    ">
+                    "
+          >
+            Designing digital experiences that feel premium, modern, and built to stand out.
+          </h1>
 
-                        Designing digital experiences that feel premium,
-                        modern, and built to stand out.
-
-                    </h1>
-
-                    <p className="
+          <p
+            className="
                     mt-8
                     max-w-[610px]
                     text-[1.05rem]
                     leading-[1.95]
                     text-white/62
-                    ">
+                    "
+          >
+            Explore a curated collection of websites, interfaces, creative branding, motion visuals,
+            and digital experiences crafted with thoughtful design and modern development.
+          </p>
 
-                        Explore a curated collection of websites,
-                        interfaces, creative branding,
-                        motion visuals, and digital experiences
-                        crafted with thoughtful design and modern development.
+          {/* CTA BUTTONS */}
 
-                    </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <button onClick={handleExplore} className="btn btn-primary">
+              Explore Projects
+              <ArrowUpRight size={18} />
+            </button>
 
-                    {/* CTA BUTTONS */}
+            <button onClick={() => navigate("/contact")} className="btn btn-secondary">
+              Start A Project
+            </button>
+          </div>
 
-                    <div className="mt-10 flex flex-wrap gap-4">
+          {/* stats */}
 
-                        <button
-                            onClick={handleExplore}
-                            className="btn btn-primary"
-                        >
+          <motion.div variants={fadeUp} className="mt-16 flex flex-wrap gap-12">
+            {[
+              ["25+", "Projects Delivered"],
+              ["98%", "Client Satisfaction"],
+              ["Modern", "Scalable Stack"],
+            ].map(([value, label]) => (
+              <div key={label}>
+                <h3 className="text-[2rem] font-black text-white">{value}</h3>
 
-                            Explore Projects
-
-                            <ArrowUpRight size={18} />
-
-                        </button>
-
-                        <button
-                            onClick={() => navigate("/contact")}
-                            className="btn btn-secondary"
-                        >
-
-                            Start A Project
-
-                        </button>
-
-                    </div>
-
-                    {/* stats */}
-
-                    <motion.div
-                        variants={fadeUp}
-                        className="mt-16 flex flex-wrap gap-12"
-                    >
-
-                        {[
-                            ["25+", "Projects Delivered"],
-                            ["98%", "Client Satisfaction"],
-                            ["Modern", "Scalable Stack"],
-                        ].map(([value, label]) => (
-
-                            <div key={label}>
-
-                                <h3 className="text-[2rem] font-black text-white">
-
-                                    {value}
-
-                                </h3>
-
-                                <p className="
+                <p
+                  className="
                                 mt-2
                                 text-[11px]
                                 uppercase
                                 tracking-[0.24em]
                                 text-white/42
-                                ">
-
-                                    {label}
-
-                                </p>
-
-                            </div>
-
-                        ))}
-
-                    </motion.div>
-
-                </motion.div>
-
-                {/* RIGHT VISUAL STACK */}
-
-                <motion.div
-                    variants={fadeUp}
-                    className="relative min-h-[620px]"
+                                "
                 >
+                  {label}
+                </p>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
 
-                    {/* floating glow */}
+        {/* RIGHT VISUAL STACK */}
 
-                    <div className="
+        <motion.div variants={fadeUp} className="relative min-h-[620px]">
+          {/* floating glow */}
+
+          <div
+            className="
                     absolute
                     left-[20%]
                     top-[30%]
@@ -193,70 +146,69 @@ function ProjectsHero({ navigate }) {
                     rounded-full
                     bg-[#a64dff]/20
                     blur-[100px]
-                    " />
+                    "
+          />
 
-                    {/* TOP CARD */}
+          {/* TOP CARD */}
 
-                    <motion.div
-                        whileHover={{
-                            y: -8,
-                            scale: 1.02,
-                        }}
-                        animate={{
-                            y: [-10, 10, -10],
-                        }}
-                        transition={{
-                            duration: 8,
-                            repeat: Infinity,
-                        }}
-                        className="
+          <motion.div
+            whileHover={{
+              y: -8,
+              scale: 1.02,
+            }}
+            animate={{
+              y: [-10, 10, -10],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+            }}
+            className="
                         absolute
                         right-0
                         top-0
                         w-[76%]
                         rotate-[8deg]
                         "
-                    >
-
-                        <div className="
+          >
+            <div
+              className="
                         rounded-[2rem]
                         border border-white/10
                         bg-white/[0.04]
                         p-4
                         backdrop-blur-xl
                         shadow-[0_20px_80px_rgba(0,0,0,0.35)]
-                        ">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-                                alt=""
-                                className="
+                        "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                alt=""
+                className="
                                 h-[320px]
                                 w-full
                                 rounded-[1.5rem]
                                 object-cover
                                 "
-                            />
+              />
+            </div>
+          </motion.div>
 
-                        </div>
+          {/* MAIN CARD */}
 
-                    </motion.div>
-
-                    {/* MAIN CARD */}
-
-                    <motion.div
-                        whileHover={{
-                            y: -10,
-                            scale: 1.02,
-                        }}
-                        animate={{
-                            y: [10, -10, 10],
-                        }}
-                        transition={{
-                            duration: 9,
-                            repeat: Infinity,
-                        }}
-                        className="
+          <motion.div
+            whileHover={{
+              y: -10,
+              scale: 1.02,
+            }}
+            animate={{
+              y: [10, -10, 10],
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+            }}
+            className="
                         absolute
                         left-0
                         bottom-0
@@ -264,71 +216,61 @@ function ProjectsHero({ navigate }) {
                         w-[84%]
                         -rotate-[6deg]
                         "
-                    >
-
-                        <div className="
+          >
+            <div
+              className="
                         rounded-[2rem]
                         border border-white/10
                         bg-[#171020]/85
                         p-5
                         backdrop-blur-xl
                         shadow-[0_35px_100px_rgba(0,0,0,0.45)]
-                        ">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"
-                                alt=""
-                                className="
+                        "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"
+                alt=""
+                className="
                                 h-[430px]
                                 w-full
                                 rounded-[1.6rem]
                                 object-cover
                                 "
-                            />
+              />
 
-                            <div className="mt-5 flex items-center justify-between">
-
-                                <div>
-
-                                    <p className="
+              <div className="mt-5 flex items-center justify-between">
+                <div>
+                  <p
+                    className="
                                     text-[11px]
                                     uppercase
                                     tracking-[0.22em]
                                     text-[#b879ff]
-                                    ">
+                                    "
+                  >
+                    UI / Development
+                  </p>
 
-                                        UI / Development
-
-                                    </p>
-
-                                    <h3 className="
+                  <h3
+                    className="
                                     mt-2
                                     text-[1.35rem]
                                     font-bold
                                     text-white
-                                    ">
+                                    "
+                  >
+                    Premium Product Experience
+                  </h3>
+                </div>
 
-                                        Premium Product Experience
-
-                                    </h3>
-
-                                </div>
-
-                                <ArrowUpRight className="text-white/50" />
-
-                            </div>
-
-                        </div>
-
-                    </motion.div>
-
-                </motion.div>
-
-            </motion.div>
-
-        </section>
-
-    );
+                <ArrowUpRight className="text-white/50" />
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
 
 export default ProjectsHero;

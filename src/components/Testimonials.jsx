@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Quote,
-  Star,
-  ArrowUpRight,
-} from "lucide-react";
+import { Quote, Star, ArrowUpRight } from "lucide-react";
 
 import { fadeUp } from "../data/motion";
 import Section from "./Section";

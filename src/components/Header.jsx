@@ -4,7 +4,6 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { pageLinks } from "../data/siteData";
 
 function Header({ path, navigate }) {
-
   const [open, setOpen] = useState(false);
 
   const goTo = (nextPath) => {
@@ -13,21 +12,13 @@ function Header({ path, navigate }) {
   };
 
   return (
-
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#110719]/72 backdrop-blur-xl">
-
       {/* NAVBAR */}
 
       <nav className="mx-auto flex h-[74px] max-w-7xl items-center justify-between px-4 sm:px-8">
-
         {/* LOGO */}
 
-        <button
-          type="button"
-          onClick={() => goTo("/")}
-          className="flex items-center gap-3"
-        >
-
+        <button type="button" onClick={() => goTo("/")} className="flex items-center gap-3">
           <img
             src="/SiraDigitalLogo.png"
             alt="SIRA Digital logo"
@@ -37,29 +28,21 @@ function Header({ path, navigate }) {
           <span className="text-[11px] font-semibold tracking-[0.18em] text-white">
             SIRA DIGITAL
           </span>
-
         </button>
 
         {/* DESKTOP LINKS */}
 
         <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.045] p-1 md:flex">
-
           {pageLinks.map((item) => (
-
             <button
               key={item.path}
               type="button"
               onClick={() => goTo(item.path)}
-              className={`nav-link ${path === item.path
-                  ? "nav-link-active"
-                  : ""
-                }`}
+              className={`nav-link ${path === item.path ? "nav-link-active" : ""}`}
             >
               {item.label}
             </button>
-
           ))}
-
         </div>
 
         {/* DESKTOP ONLY CTA */}
@@ -93,42 +76,30 @@ function Header({ path, navigate }) {
           className="mobile-menu-btn md:hidden"
           onClick={() => setOpen((value) => !value)}
         >
-          {
-            open
-              ? <X size={20} />
-              : <Menu size={20} />
-          }
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
-
       </nav>
 
       {/* MOBILE MENU */}
 
       <AnimatePresence>
-
         {open && (
-
           <motion.div
-
             initial={{
               opacity: 0,
               y: -10,
             }}
-
             animate={{
               opacity: 1,
               y: 0,
             }}
-
             exit={{
               opacity: 0,
               y: -10,
             }}
-
             transition={{
-              duration: .22,
+              duration: 0.22,
             }}
-
             className="
             mx-4
             mt-2
@@ -143,23 +114,17 @@ function Header({ path, navigate }) {
             md:hidden
             "
           >
-
             {/* MOBILE LINKS */}
 
             {pageLinks.map((item) => (
-
               <button
                 key={item.path}
                 type="button"
                 onClick={() => goTo(item.path)}
-                className={`mobile-nav-link ${path === item.path
-                    ? "mobile-nav-link-active"
-                    : ""
-                  }`}
+                className={`mobile-nav-link ${path === item.path ? "mobile-nav-link-active" : ""}`}
               >
                 {item.label}
               </button>
-
             ))}
 
             {/* MOBILE CTA ONLY */}
@@ -178,16 +143,11 @@ function Header({ path, navigate }) {
               "
             >
               Start Project
-
               <ArrowRight size={16} />
             </button>
-
           </motion.div>
-
         )}
-
       </AnimatePresence>
-
     </header>
   );
 }

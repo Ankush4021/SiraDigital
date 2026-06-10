@@ -7,14 +7,13 @@ import PageShell from "../components/PageShell";
 
 function Contact() {
   return (
-  <>
-  <ContactHero />
-  <ContactServicesStrip />
-  <ContactPanel />
-  <ContactFaq />
-  <FinalCTA />
-  
-  </>
+    <>
+      <ContactHero />
+      <ContactServicesStrip />
+      <ContactPanel />
+      <ContactFaq />
+      <FinalCTA />
+    </>
   );
 }
 

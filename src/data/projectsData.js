@@ -30,8 +30,7 @@ export const projects = [
     type: "image",
     size: "tall",
     image: `${assetPath}poster-feminism.jpg`,
-    description:
-      "Editorial poster design with bold hierarchy for a campus discussion event.",
+    description: "Editorial poster design with bold hierarchy for a campus discussion event.",
     tags: ["Poster", "Campaign"],
   },
   {
@@ -43,8 +42,7 @@ export const projects = [
     image: `${assetPath}video-short-film.jpg`,
     url: "https://youtu.be/cy5eGn82AuY",
     cta: "Watch Film",
-    description:
-      "Scripted, directed, and edited with restrained psychological storytelling.",
+    description: "Scripted, directed, and edited with restrained psychological storytelling.",
     tags: ["Editing", "Storytelling"],
   },
   {
@@ -78,8 +76,7 @@ export const projects = [
     image: `${assetPath}video-podcast.jpg`,
     url: "https://youtu.be/yp-a90fTG-0",
     cta: "Open Podcast",
-    description:
-      "Podcast production with branded visuals, sound treatment, and episode editing.",
+    description: "Podcast production with branded visuals, sound treatment, and episode editing.",
     tags: ["Podcast", "Sound"],
   },
   {
@@ -89,8 +86,7 @@ export const projects = [
     type: "image",
     size: "logo",
     image: `${assetPath}logo-sjmc-prime.jpg`,
-    description:
-      "Institutional logo concept with a polished, media-school identity feel.",
+    description: "Institutional logo concept with a polished, media-school identity feel.",
     tags: ["Logo", "Identity"],
   },
   {
@@ -113,8 +109,7 @@ export const projects = [
     image: `${assetPath}video-documentary.jpg`,
     url: "https://youtu.be/pYgFRVwLojg",
     cta: "Watch Documentary",
-    description:
-      "Long-form documentary edit with interviews, narrative arc, and sound design.",
+    description: "Long-form documentary edit with interviews, narrative arc, and sound design.",
     tags: ["Documentary", "Editing"],
   },
   {
@@ -124,8 +119,7 @@ export const projects = [
     type: "image",
     size: "tall",
     image: `${assetPath}poster-startups-workshop.jpg`,
-    description:
-      "Premium event poster for structured ideation and startup workshop communication.",
+    description: "Premium event poster for structured ideation and startup workshop communication.",
     tags: ["Poster", "Event"],
   },
   {
@@ -183,8 +177,7 @@ export const projects = [
     image: `${assetPath}video-ai-logo-animation.jpg`,
     url: "https://youtu.be/Pnn9bvnXYKw",
     cta: "Watch Animation",
-    description:
-      "AI-powered animated logo sequence with motion design and visual effects.",
+    description: "AI-powered animated logo sequence with motion design and visual effects.",
     tags: ["Motion", "AI"],
   },
   {
@@ -194,8 +187,7 @@ export const projects = [
     type: "image",
     size: "logo",
     image: `${assetPath}logo-breaking-news.jpg`,
-    description:
-      "Broadcast-style identity mark made for news packaging and fast recognition.",
+    description: "Broadcast-style identity mark made for news packaging and fast recognition.",
     tags: ["Broadcast", "Logo"],
   },
   {
@@ -207,8 +199,7 @@ export const projects = [
     image: `${assetPath}video-news-package.jpg`,
     url: "https://youtu.be/aMe5YFzXvlY",
     cta: "Watch Package",
-    description:
-      "Structured news segment with graphics, voiceover, and on-field footage editing.",
+    description: "Structured news segment with graphics, voiceover, and on-field footage editing.",
     tags: ["News", "Graphics"],
   },
   {

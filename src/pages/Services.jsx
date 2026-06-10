@@ -7,7 +7,6 @@ import Testimonials from "../components/Testimonials";
 function Services({ navigate }) {
   return (
     <>
-
       {/* HERO */}
       <ServiceHero navigate={navigate} />
       <ServicesShowcase />

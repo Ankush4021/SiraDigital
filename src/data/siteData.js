@@ -1,9 +1,4 @@
-import {
-  Brush,
-  Code2,
-  Megaphone,
-  Video,
-} from "lucide-react";
+import { Brush, Code2, Megaphone, Video } from "lucide-react";
 
 export const pageLinks = [
   { label: "Home", path: "/" },
@@ -90,8 +85,7 @@ export const projects = [
   {
     title: "CH Info Solutions",
     category: "Corporate Web Development",
-    copy:
-      "Built a sleek corporate website with modern aesthetics, responsive performance, intuitive navigation, and a professional interface designed to enhance business credibility and online visibility.",
+    copy: "Built a sleek corporate website with modern aesthetics, responsive performance, intuitive navigation, and a professional interface designed to enhance business credibility and online visibility.",
     metric: "Corporate Experience",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
@@ -101,8 +95,7 @@ export const projects = [
   {
     title: "Dinesh Caterers",
     category: "Restaurant & Catering Website",
-    copy:
-      "Developed a visually rich catering website with elegant layouts, mobile-optimized experience, premium presentation, and conversion-focused design tailored for strong local brand impact.",
+    copy: "Developed a visually rich catering website with elegant layouts, mobile-optimized experience, premium presentation, and conversion-focused design tailored for strong local brand impact.",
     metric: "Mobile First",
     image:
       "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=crop",
@@ -111,11 +104,9 @@ export const projects = [
   {
     title: "Payal Portfolio Website",
     category: "Personal Portfolio",
-    copy:
-      "A modern personal portfolio website crafted with smooth animations, premium UI design, responsive layouts, and an engaging user experience to showcase personal brand and digital presence.",
+    copy: "A modern personal portfolio website crafted with smooth animations, premium UI design, responsive layouts, and an engaging user experience to showcase personal brand and digital presence.",
     metric: "Responsive Design",
-    image:
-      "public/assets/picture3.jpg",
+    image: "/assets/picture3.jpg",
     link: "https://payal-portfolio-beta.vercel.app/",
   },
 ];

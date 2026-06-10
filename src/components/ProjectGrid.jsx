@@ -24,11 +24,7 @@ function ProjectGrid() {
           className="project-card"
         >
           <div className="project-image-wrapper">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
+            <img src={project.image} alt={project.title} className="project-image" />
 
             <div className="project-overlay">
               <span>{project.category}</span>

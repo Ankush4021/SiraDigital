@@ -8,12 +8,7 @@ const showcaseProjects = projects.filter((project) => project.size !== "logo");
 function ProjectMedia({ project }) {
   return (
     <div className="project-sample-media">
-      <img
-        src={project.image}
-        alt={project.title}
-        loading="lazy"
-        decoding="async"
-      />
+      <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
 
       <div className="project-sample-shade" />
 
@@ -97,12 +92,7 @@ function LogoScroller() {
       <div className="project-logo-track">
         {logos.map((project, index) => (
           <div className="project-logo-item" key={`${project.id}-${index}`}>
-            <img
-              src={project.image}
-              alt={project.title}
-              loading="lazy"
-              decoding="async"
-            />
+            <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
             <span>{project.title}</span>
           </div>
         ))}
@@ -122,8 +112,8 @@ function ProjectsShowcase() {
           </div>
 
           <p>
-            A focused selection from Payal's creative portfolio, added as optimized
-            images and lightweight video links so the page stays fast.
+            A focused selection from Payal's creative portfolio, added as optimized images and
+            lightweight video links so the page stays fast.
           </p>
         </div>
 

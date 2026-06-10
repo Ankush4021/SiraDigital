@@ -41,9 +41,8 @@ function FinalCTA() {
 
         {/* text */}
         <p className="mx-auto mt-8 max-w-2xl text-[1rem] leading-8 text-white/60">
-          SIRA Digital helps businesses build modern websites, stronger branding,
-          and visually consistent digital experiences designed for clarity,
-          trust, and long-term growth.
+          SIRA Digital helps businesses build modern websites, stronger branding, and visually
+          consistent digital experiences designed for clarity, trust, and long-term growth.
         </p>
 
         {/* buttons */}
@@ -60,37 +59,25 @@ function FinalCTA() {
         {/* bottom small info */}
         <div className="mt-14 flex flex-wrap items-center justify-center gap-8 border-t border-white/10 pt-8">
           <div>
-            <p className="text-lg font-bold text-white">
-              Modern
-            </p>
+            <p className="text-lg font-bold text-white">Modern</p>
 
-            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">
-              DESIGN SYSTEMS
-            </p>
+            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">DESIGN SYSTEMS</p>
           </div>
 
           <div className="hidden h-10 w-px bg-white/10 sm:block" />
 
           <div>
-            <p className="text-lg font-bold text-white">
-              Clear
-            </p>
+            <p className="text-lg font-bold text-white">Clear</p>
 
-            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">
-              COMMUNICATION
-            </p>
+            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">COMMUNICATION</p>
           </div>
 
           <div className="hidden h-10 w-px bg-white/10 sm:block" />
 
           <div>
-            <p className="text-lg font-bold text-white">
-              Scalable
-            </p>
+            <p className="text-lg font-bold text-white">Scalable</p>
 
-            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">
-              DIGITAL EXPERIENCES
-            </p>
+            <p className="mt-1 text-xs tracking-[0.2em] text-white/40">DIGITAL EXPERIENCES</p>
           </div>
         </div>
       </motion.div>

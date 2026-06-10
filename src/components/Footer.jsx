@@ -33,14 +33,24 @@ function Footer({ navigate }) {
               </div>
             </div>
             <p>
-              We craft websites, brand visuals, motion content, and digital presence systems that help growing brands
-              look sharper, clearer, and more trusted online.
+              We craft websites, brand visuals, motion content, and digital presence systems that
+              help growing brands look sharper, clearer, and more trusted online.
             </p>
             <div className="footer-socials">
-              <a href="https://www.instagram.com/siradigital.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/siradigital.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="https://www.linkedin.com/company/sira-digital-in/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/sira-digital-in/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={18} />
               </a>
               <a href="https://t.me/" target="_blank" rel="noreferrer" aria-label="Telegram">
@@ -71,7 +81,7 @@ function Footer({ navigate }) {
             <h3>Contact</h3>
             <a href="mailto:siradigital@gmail.com">
               <Mail size={16} />
-            siradigital@gmail.com
+              siradigital@gmail.com
             </a>
             <a href="tel:+919690070133">
               <Phone size={16} />
