@@ -63,33 +63,42 @@ function ProjectsHero({ navigate }) {
             <Sparkles size={14} />
             Selected Work
           </div>
-
-          <h1
+          <motion.h1
+            variants={fadeUp}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="
-                    max-w-[620px]
-                    text-[2.15rem]
-                    font-[800]
-                    leading-[1.05]
-                    text-white
-                    md:text-[3rem]
-                    xl:text-[3.7rem]
-                    "
+    mt-10
+    max-w-[12ch]
+    text-[clamp(2.5rem,9vw,4.8rem)]
+    font-[800]
+    leading-[0.95]
+    tracking-[-0.05em]
+    text-white
+  "
           >
             Designing digital experiences that feel premium, modern, and built to stand out.
-          </h1>
+          </motion.h1>
 
-          <p
+          <motion.p
+            variants={fadeUp}
             className="
-                    mt-8
-                    max-w-[610px]
-                    text-[1.05rem]
-                    leading-[1.95]
-                    text-white/62
-                    "
+    mt-7
+    max-w-[610px]
+    text-[1rem]
+    leading-[1.9]
+    text-white/62
+  "
           >
-            Explore a curated collection of websites, interfaces, creative branding, motion visuals,
-            and digital experiences crafted with thoughtful design and modern development.
-          </p>
+            Explore a curated collection of websites, interfaces,
+            creative branding, motion visuals, and digital experiences
+            crafted with thoughtful design and modern development.
+          </motion.p>
 
           {/* CTA BUTTONS */}
 

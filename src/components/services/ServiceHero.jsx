@@ -142,7 +142,7 @@ function ServiceHero({ navigate }) {
 
               <motion.div
                 whileHover={{ y: -6 }}
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-center"
               >
                 <h4 className="text-2xl font-black text-white">
                   25+
@@ -155,7 +155,7 @@ function ServiceHero({ navigate }) {
 
               <motion.div
                 whileHover={{ y: -6 }}
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-center"
               >
                 <h4 className="text-2xl font-black text-white">
                   4+
@@ -168,7 +168,7 @@ function ServiceHero({ navigate }) {
 
               <motion.div
                 whileHover={{ y: -6 }}
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-5 text-center"
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-center"
               >
                 <h4 className="text-2xl font-black text-white">
                   100%
@@ -181,7 +181,7 @@ function ServiceHero({ navigate }) {
 
             </div>
 
-            <div className="mt-8 grid gap-4">
+            <div className="mt-6 grid gap-4">
 
               <motion.div
                 whileHover={{ x: 4 }}
@@ -241,7 +241,6 @@ function ServiceHero({ navigate }) {
               </motion.div>
 
             </div>
-            ```
 
           </div>
         </motion.div>
