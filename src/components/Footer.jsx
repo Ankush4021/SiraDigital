@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail, Phone, Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 import { pageLinks, services } from "../data/siteData";
 
 function Footer({ navigate }) {
@@ -53,8 +54,13 @@ function Footer({ navigate }) {
               >
                 <Linkedin size={18} />
               </a>
-              <a href="https://t.me/" target="_blank" rel="noreferrer" aria-label="Telegram">
-                <Send size={18} />
+              <a
+                href="https://wa.me/919690070133"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={18} />
               </a>
             </div>
           </div>
@@ -79,9 +85,9 @@ function Footer({ navigate }) {
 
           <div className="footer-column footer-contact">
             <h3>Contact</h3>
-            <a href="mailto:siradigital@gmail.com">
+            <a href="mailto:support.siradigital@gmail.com">
               <Mail size={16} />
-              siradigital@gmail.com
+              support.siradigital@gmail.com
             </a>
             <a href="tel:+919690070133">
               <Phone size={16} />
@@ -98,7 +104,7 @@ function Footer({ navigate }) {
           <span>© 2026 SIRA Digital. All rights reserved.</span>
           <span>Built for small businesses, startups, creators, and local brands.</span>
         </div>
-      </footer>
+      </footer >
     </>
   );
 }

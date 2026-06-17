@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import { ArrowRight, PhoneCall, MessageCircle, CheckCircle2 } from "lucide-react";
 
@@ -36,6 +38,39 @@ const staggerContainer = {
 };
 
 const ContactPanel = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "Website Development",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      alert("✅ Thank you! Your message has been sent.");
+      setFormData({name:"",email:"",phone:"",service:"Website Development",message:""});
+    } catch(err){
+      console.error(err);
+      alert(" Failed to send message. Please try again.");
+    }
+    setLoading(false);
+  };
+
   return (
     <section id="contact-panel" className="contact-section-shell">
       <motion.div
@@ -119,7 +154,7 @@ const ContactPanel = () => {
                 duration: 0.25,
               }}
             >
-              <h3>20+</h3>
+              <h3>25+</h3>
               <span>Projects Completed</span>
             </motion.div>
 
@@ -176,7 +211,7 @@ const ContactPanel = () => {
             <motion.h3 variants={fadeUp}>Start Your Project</motion.h3>
 
             <motion.p variants={fadeUp}>
-              Tell us about your idea and we’ll contact you shortly.
+              Tell us about your idea and we will contact you shortly.
             </motion.p>
           </motion.div>
 
@@ -184,25 +219,26 @@ const ContactPanel = () => {
 
           <motion.form
             className="contact-form-grid"
+            onSubmit={handleSubmit}
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.input variants={fadeUp} type="text" placeholder="Your Name" />
+            <motion.input variants={fadeUp} type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" required />
 
-            <motion.input variants={fadeUp} type="email" placeholder="Email Address" />
+            <motion.input variants={fadeUp} type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required />
 
-            <motion.input variants={fadeUp} type="tel" placeholder="Phone Number" />
+            <motion.input variants={fadeUp} type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
 
-            <motion.select variants={fadeUp}>
+            <motion.select variants={fadeUp} name="service" value={formData.service} onChange={handleChange}>
               <option>Website Development</option>
               <option>Branding</option>
               <option>Video Editing</option>
               <option>Social Media</option>
             </motion.select>
 
-            <motion.textarea variants={fadeUp} rows="5" placeholder="Tell us about your project" />
+            <motion.textarea variants={fadeUp} rows="5" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your project" required />
 
             <motion.button
               variants={fadeUp}
@@ -214,8 +250,9 @@ const ContactPanel = () => {
               }}
               type="submit"
               className="btn btn-primary full-width-btn"
+              disabled={loading}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
               <ArrowRight size={18} />
             </motion.button>
           </motion.form>
