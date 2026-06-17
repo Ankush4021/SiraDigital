@@ -191,7 +191,7 @@ function ProjectsHero({ navigate }) {
                         "
             >
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                src="https://i.pinimg.com/736x/bb/77/72/bb7772074ede4af7dd24a843856c691a.jpg"
                 alt=""
                 className="
                                 h-[320px]
@@ -237,7 +237,7 @@ function ProjectsHero({ navigate }) {
                         "
             >
               <img
-                src="https://images.unsplash.com/photo-1558655146-9f40138edfeb"
+                src="https://i.pinimg.com/1200x/e2/36/f3/e236f32a9d24460389e1df94e75560b6.jpg"
                 alt=""
                 className="
                                 h-[430px]
