@@ -8,7 +8,7 @@ function Footer({ navigate }) {
   };
 
   return (
-    <>
+    <div className="footer-container p-4">
       <a
         href="https://wa.me/919690070133"
         target="_blank"
@@ -105,7 +105,7 @@ function Footer({ navigate }) {
           <span>Built for small businesses, startups, creators, and local brands.</span>
         </div>
       </footer >
-    </>
+    </div>
   );
 }
 
